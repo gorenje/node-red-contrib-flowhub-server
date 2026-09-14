@@ -6,12 +6,14 @@
   },
   "keywords": [
     "node-red",
-    "flowhub",
+    "flowhub.org",
     "flow-sharing",
-    "collaborative",
+    "collaboration",
     "flow-development",
-    "flow-management",
-    "git"
+    "flow-version-control",
+    "git",
+    "visual-version-control",
+    "local-first-gitstorage"
   ],
   "homepage": "https://flowhub.org",
   "license": "Don't be Evil.",
