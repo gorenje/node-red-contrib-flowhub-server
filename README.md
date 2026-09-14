@@ -35,9 +35,28 @@ Explanation:
 - `/store/` is the path specified needs to be included
 - `gerrit/screencast1/main` is the username to commit changes with, screencast1 is the repository name which corresponds to the directory name in the repos directory. `main` is the branch and should be used by default.
 
+## Changes to settings.js
+
+Some changes need to be made to the `settings.js` file to support the larger flow size.
+
+
+```
+    /** The maximum size of HTTP request that will be accepted by the runtime api.
+     * Default: 5mb
+     */
+    //apiMaxLength: '5mb',
+```
+
+because of the size of the CDN flow, this needs to be changed to at least 25mb 
+
+```
+    /** The maximum size of HTTP request that will be accepted by the runtime api.
+     * Default: 5mb
+     */
+    apiMaxLength: '25mb',
+```
+
 ## Using SSL Certificates
 
 There is a [post](https://discourse.nodered.org/t/setup-of-https-ssl-local-webxr-quest-development/96224) describing how to do that for Node-RED.
-
-
 
