@@ -1,4 +1,4 @@
-## FlowHub Local Server
+## Local Git Store for Node-RED
 
 **Local Git storage for Node-RED flows**
 
@@ -6,15 +6,25 @@ This package defines the flows that are required to install and run a local Git 
 
 The aim is to enable local git usage for maintaining visual flow code using a visual version control approach based on Git.
 
-This work was inspired by the [Local First Conf](https://www.localfirstconf.com/).
-
 This installs **no** nodes nor plugins, the package only provides example flows that, when installed, provide the backend for the FlowHub.org nodes. This package is slightly larger (ca. 20MB) but that's because it contains third-party JS code for the Webiliser frontend.
 
 That allows this to be executed completely offline, including the Webiliser frontend.
 
+## Introduction
+
+FlowHub.org provides *visual* change management (aka version control) on top of GitHub. FlowHub Local (aka FlowHubⓁ) is a local-first server for the FlowHub.org nodes, replacing the GitHub requirement.
+
+FlowHubⓁ provides a local gitstore for managing change made to flows, locally, no internet connection is required. FlowHubⓁ is used in conjunction with the FlowHub.org nodes but provides a local gitstore, replacing GitHub.
+
+FlowHubⓁ has a client-server architecture with both client and server being installed in Node-RED instances. The [client](https://flows.nodered.org/node/@gregoriusrippenstein/node-red-contrib-flowhub) and [server](https://flows.nodered.org/node/@gregoriusrippenstein/node-red-contrib-flowhub-server) are both Node-RED node packages that can be installed into any Node-RED instance.
+
+FlowHubⓁ is designed to be installed on a central instance of Node-RED and multiple clients connect and communicate with that installation of FlowHubⓁ.
+
+This solution was inspired by the [Local First Conf](https://www.localfirstconf.com/) initiative.
+
 ## Installation
 
-Using the Flow Importer interface inside of Node-RED to install these flows via the examples list of flows.
+Installation is described in the [installation guide](https://cdn.openmindmap.org/content/FlowHub-local-installation-guide.pdf).
 
 ## FlowHub.org Token definition
 
